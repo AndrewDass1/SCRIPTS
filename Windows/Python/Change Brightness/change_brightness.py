@@ -11,7 +11,7 @@ def insert_number():
 		except ValueError:
 			print("Invalid input. ", end="")	
         
-	if brightness_level < 0 or brightness_level > 100 or brightness_level == -0:
+	if brightness_level < 0 or brightness_level > 100:
 			print("{} is not within 0 to 100. ".format(brightness_level), end="")
 			insert_number()
 	else:
