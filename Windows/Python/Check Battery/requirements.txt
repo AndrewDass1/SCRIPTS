@@ -1,0 +1,2 @@
+pypiwin32
+win10toast
