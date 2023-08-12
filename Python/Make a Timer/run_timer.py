@@ -76,6 +76,7 @@ def timer():
             print("Time is still going...")
             print(time.sleep(10))
 
-    return "Program Finished."
+    print("Program Finished.")
 
 timer()
+
