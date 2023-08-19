@@ -63,7 +63,7 @@ def timer():
             if insert_seconds >= 0 and insert_seconds <= 59:
                 break
         except ValueError:
-                print("Not a real second number. ", end="")
+            print("Not a real second number. ", end="")
 
     inserted_time = datetime.datetime(insert_year, insert_month, insert_day, insert_hour, insert_minute, insert_seconds)
     print("The timer will stop when it reaches this date and time:", inserted_time)
@@ -74,9 +74,16 @@ def timer():
         else:
             print("Current time:", datetime.datetime.now())
             print("Time is still going...")
-            print(time.sleep(10))
+            difference_in_time = inserted_time - datetime.datetime.now()
+            print("Time left: ", difference_in_time)
+
+            if (difference_in_time.total_seconds()) > 10:
+                time.sleep(10)
+                print("10 seconds has passed.")
+            else:
+                time.sleep(difference_in_time.total_seconds())
+                print("Less than 10 seconds has passed.")
 
     print("Program Finished.")
 
 timer()
-
