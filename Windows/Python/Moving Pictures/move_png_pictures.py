@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-import os
-import glob
-import shutil
+import os, glob, shutil
 
 download_path = os.getcwd()
 
