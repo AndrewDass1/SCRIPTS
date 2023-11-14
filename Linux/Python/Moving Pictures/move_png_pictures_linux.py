@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 
-import os
-import glob
-import shutil
+import os, glob, shutil
 
 download_path = os.getcwd()
 str_download_path = str(download_path)
@@ -10,7 +8,7 @@ str_download_path = str(download_path)
 png_images = glob.glob("*.png")
 picture_png_entry = 0
 
-if download_path == r"":
+if download_path == r"insert_file_download_path":
 	for i in png_images:
 		current_image = png_images[picture_png_entry]
 		str_current_image = str(current_image)
@@ -18,7 +16,7 @@ if download_path == r"":
 		original_path = str_download_path + "/" + str_current_image		
 		print(original_path)
 
-		shutil.move( os.path.abspath(str_current_image), os.path.abspath(r"") + "/" + str_current_image )
+		shutil.move( os.path.abspath(str_current_image), os.path.abspath(r"insert_directory_path_where_pictures_will_be_moved_to") + "/" + str_current_image )
 
 		picture_png_entry += 1
 
