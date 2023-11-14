@@ -12,7 +12,7 @@ if download_path == r"insert_file_download_path":
         current_image = jpg_images[picture_JPG_entry]
         str_current_image = str(current_image)
 
-        original_path = str_download_path + "/" + str_current_image
+        original_path = download_path + "/" + str_current_image
         print(original_path)
 
         shutil.move( os.path.abspath(str_current_image), os.path.abspath(r"directory_path_where_pictures_will_be_moved_to") + "/" + str_current_image )
