@@ -3,7 +3,6 @@
 import os, glob, shutil
 
 download_path = os.getcwd()
-str_download_path = str(download_path)
 
 jpg_images = glob.glob("*.jpg")
 picture_JPG_entry = 0
