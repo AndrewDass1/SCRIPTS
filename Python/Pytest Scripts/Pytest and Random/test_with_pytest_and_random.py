@@ -6,5 +6,3 @@ def test_check_multiplication():
     c = random.randint(1, 4)
 
     assert a * b == c
-        
-test_check_multiplication()
